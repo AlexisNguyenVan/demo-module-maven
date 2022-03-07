@@ -1,1 +1,2 @@
 That's a dummy file !
+Second line
