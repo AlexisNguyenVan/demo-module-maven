@@ -48,6 +48,33 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.plugins.version}</version>
             </plugin>
+            <plugin>
+                <groupId>org.jfrog.buildinfo</groupId>
+                <artifactId>artifactory-maven-plugin</artifactId>
+                <version>3.2.3</version>
+                <inherited>false</inherited>
+                <executions>
+                    <execution>
+                        <id>build-info</id>
+                        <goals>
+                            <goal>publish</goal>
+                        </goals>
+                        <configuration>
+                            <deployProperties>
+                                <gradle>awesome</gradle>
+                                <review.team>qa</review.team>
+                            </deployProperties>
+                            <publisher>
+                                <contextUrl>http://134.59.213.137:8001/artifactory/test/</contextUrl>
+                                <username>admin</username>
+                                <password>pRs2qDEaHcHaGfr</password>
+                                <repoKey>test</repoKey>
+                                <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
+                            </publisher>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
