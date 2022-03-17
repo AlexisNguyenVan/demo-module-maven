@@ -1,5 +1,5 @@
 # Demo-Module-Maven
-Test changement 
+Test changement.
 
 This repository is a simple project demonstrating how to split a project into maven module.
 
